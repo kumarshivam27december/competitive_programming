@@ -1,18 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
-int findpeak(vector<int>&arr) {
+int squareroot(int x) {
 	int s = 0;
-	int e = arr.size() - 1;
-	while (s < e) {
+	int e = x - 1;
+	int ans = 0;
+	while (s <= e) {
 		int mid = s + (e - s) / 2;
-		if (arr[mid] < arr[mid + 1]) {
+		int square = mid * mid;
+		if (square == x) {
+			return mid;
+		} else if (square < x) {
+			ans = mid;
 			s = mid + 1;
 		} else {
-			e = mid ;
+			e = mid - 1;
 		}
-
 	}
-	return s;
+	return ans;
 }
 int main() {
 #ifndef ONLINE_JUDGE
@@ -21,11 +25,6 @@ int main() {
 #endif
 	int n;
 	cin >> n;
-	vector<int>arr(n);
-	for (int i = 0; i < n; i++) {
-		cin >> arr[i];
-	}
-	int ans = findpeak(arr);
-	cout << ans << endl;
+	cout << squareroot(n) << endl;
 	return 0;
 }
