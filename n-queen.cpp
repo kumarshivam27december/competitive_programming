@@ -56,11 +56,9 @@ int main() {
     cin >> n;
     vector<vector<string>> ans = solve(n);
     for (const auto& board : ans) {
-        cout << "[";
         for (const auto& row : board) {
             cout << "[ " << row << " ]" << endl;
         }
-        cout << "]";
         cout << endl;
     }
     return 0;
