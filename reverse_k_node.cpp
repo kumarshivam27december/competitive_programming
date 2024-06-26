@@ -28,6 +28,18 @@ void insertatback(node* &head, int num) {
 	temp->next = t2;
 }
 
+
+void deletenode(node* &head, int position) {
+	// delete first node
+	node* temp = head;
+	while (position) {
+		temp = temp->next;
+		position--;
+	}
+
+
+}
+
 void print(node* &head) {
 	node* temp = head;
 	while (temp->next != NULL) {
@@ -88,7 +100,6 @@ int main() {
 	insertatback(head, 1); print(head);
 
 
-	cout << "😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢" << endl;
 
 
 	return 0;
