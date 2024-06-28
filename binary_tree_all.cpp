@@ -57,6 +57,15 @@ void findsum(node* root, int &ans) {
 	findsum(root->left, ans);
 	findsum(root->right, ans);
 }
+void inorder_loop(node* root) {
+
+}
+void preorder_loop(node* root) {
+
+}
+void postorder_loop(node* root) {
+
+}
 int sum(node* root) {
 	int ans = 0;
 	findsum(root, ans);
