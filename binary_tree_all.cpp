@@ -66,6 +66,8 @@ void preorder_loop(node* root) {
 void postorder_loop(node* root) {
 
 }
+
+//create from tree from preorder and inorder traversal
 int sum(node* root) {
 	int ans = 0;
 	findsum(root, ans);
