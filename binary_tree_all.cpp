@@ -58,7 +58,13 @@ void findsum(node* root, int &ans) {
 	findsum(root->right, ans);
 }
 void inorder_loop(node* root) {
+	queue<node*> q;
+	q.push(root);
+	while (!q.empty()) {
+		node* temp = q.front();
+		q.pop();
 
+	}
 }
 void preorder_loop(node* root) {
 
